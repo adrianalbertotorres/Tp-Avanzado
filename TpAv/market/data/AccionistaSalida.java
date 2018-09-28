@@ -29,6 +29,10 @@ public class AccionistaSalida {
 	public void setISIN(String iSIN) {
 		ISIN = iSIN;
 	}
+	@Override
+	public String toString() {
+		return "AccionistaSalida [ticker=" + ticker + ", price=" + price + ", ISIN=" + ISIN + "]";
+	}
 	
 	
 }
