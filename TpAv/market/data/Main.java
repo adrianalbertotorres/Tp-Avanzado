@@ -11,6 +11,6 @@ public class Main {
 		}
 
 		IOArchico.Lee(dir);
-
+		IOArchico.Escribe();
 	}
 }
