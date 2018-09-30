@@ -20,7 +20,7 @@ public class IOArchico {
 
 		try {
 			URL url = new URL(dir);
-			Accionista[] accionistas = mapper.readValue(url, Accionista[].class);
+			Mercado[] accionistas = mapper.readValue(url, Mercado[].class);
 
 			for (int i = 0; i < accionistas.length; i++) {
 				lista.add(new AccionistaSalida(accionistas[i].getTicker(), accionistas[i].getPrice(),

@@ -1,6 +1,6 @@
 package market.data;
 
-public class Main {
+public class MainParte1 {
 
 	public static void main(String[] direccion) {
 
@@ -13,6 +13,6 @@ public class Main {
 		IOArchico.Lee(dir);
 		IOArchico.Escribe();
 		
-	
+			
 	}
 }

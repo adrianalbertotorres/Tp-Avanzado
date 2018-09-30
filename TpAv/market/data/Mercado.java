@@ -1,6 +1,6 @@
 package market.data;
 
-public class Accionista {
+public class Mercado {
 
 	private String currency;
     private String ticker;
