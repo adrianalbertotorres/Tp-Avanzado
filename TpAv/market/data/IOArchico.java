@@ -37,11 +37,12 @@ public class IOArchico {
 
 	public static void Escribe() {
 
-		File fileOut = new File("C:\\Users\\Adri\\git\\Tp-Avanzado\\Salida.json");
+		File fileOut = new File("C:\\TPAvanzado\\Salida.json");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.enable(SerializationFeature.INDENT_OUTPUT);
 			mapper.writeValue(fileOut, lista);
+			System.out.println("Archivo \"Salida.Json\" generado");
 		} catch (JsonGenerationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,5 +53,6 @@ public class IOArchico {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 	}
 }
