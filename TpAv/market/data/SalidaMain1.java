@@ -1,11 +1,11 @@
 package market.data;
 
-public class AccionistaSalida {
+public class SalidaMain1 {
 
 	private String ticker;
 	private double price;
 	private String ISIN;
-	public AccionistaSalida(String ticker, double price, String iSIN) {
+	public SalidaMain1(String ticker, double price, String iSIN) {
 		super();
 		this.ticker = ticker;
 		this.price = price;

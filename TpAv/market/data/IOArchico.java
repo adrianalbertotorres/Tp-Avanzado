@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class IOArchico {
-	static List<AccionistaSalida> lista = new ArrayList();
+	static List<SalidaMain1> lista = new ArrayList();
 
 	public static void Lee(String dir) {
 
@@ -23,7 +23,7 @@ public class IOArchico {
 			Mercado[] accionistas = mapper.readValue(url, Mercado[].class);
 
 			for (int i = 0; i < accionistas.length; i++) {
-				lista.add(new AccionistaSalida(accionistas[i].getTicker(), accionistas[i].getPrice(),
+				lista.add(new SalidaMain1(accionistas[i].getTicker(), accionistas[i].getPrice(),
 						accionistas[i].getId()));
 
 			}

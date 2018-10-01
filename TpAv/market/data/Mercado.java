@@ -44,6 +44,11 @@ public class Mercado {
 	public void setName(String name) {
 		this.name = name;
 	}
+	@Override
+	public String toString() {
+		return "Mercado [currency=" + currency + ", ticker=" + ticker + ", exchange=" + exchange + ", id=" + id
+				+ ", price=" + price + ", name=" + name + "]";
+	}
 	
 	
 }
