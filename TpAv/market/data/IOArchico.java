@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,14 +39,20 @@ public class IOArchico {
 
 	public static void Escribe() {
 
-		File fileOut = new File("C:\\TPAvanzado\\Salida.json");
+		File fileOut = new File("C:\\TPAvanzado\\Salida1.json");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.enable(SerializationFeature.INDENT_OUTPUT);
 			mapper.writeValue(fileOut, lista);
 			System.out.println("Archivo \"Salida.Json\" generado");
+			Object[] options = { "OK" };
+			JOptionPane.showOptionDialog(null, "En direcion C:\\TPAvanzado", "Se genero archivo Salida1.Json",
+			JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+			null, options, options[0]);
+			
 		} catch (JsonGenerationException e) {
 			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (JsonMappingException e) {
 			// TODO Auto-generated catch block

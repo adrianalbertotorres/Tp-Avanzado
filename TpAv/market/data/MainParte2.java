@@ -20,12 +20,10 @@ public class MainParte2 {
 		String referencia;
 
 		double cartera = 0;
-		double cartera1 = 0;
+		
 
 		try {
-
-			URL url = new URL(
-					"https://raw.githubusercontent.com/adrianalbertotorres/Tp-Avanzado/master/prestamos.json");
+			URL url = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/prestamos.json");
 			URL url2 = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json");
 			Prestamos[] Prs = mapper.readValue(url, Prestamos[].class);
 			Mercado[] Mer = mapper.readValue(url2, Mercado[].class);
