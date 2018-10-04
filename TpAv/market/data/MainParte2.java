@@ -24,15 +24,17 @@ public class MainParte2 {
 
 		try {
 			URL url = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/prestamos.json");
-			URL url2 = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json");
+		
+			File file2 = new File("C:\\TPAvanzado\\Salida.json");
 			Prestamos[] Prs = mapper.readValue(url, Prestamos[].class);
-			Mercado[] Mer = mapper.readValue(url2, Mercado[].class);
+		
+			Entrada1[] Mer=mapper.readValue(file2, Entrada1[].class);
 
 			for (int i = 0; i < Prs.length; i++) {
 				for (int y = 0; y < Prs[i].getPositions().size(); y++) {
 					referencia = Prs[i].getPositions().get(y).getId();
 					for (int j = 0; j < Mer.length; j++) {
-						if (referencia.compareTo(Mer[j].getId()) == 0) {
+						if (referencia.compareTo(Mer[j].getIsin()) == 0) {
 							cartera = cartera + (Mer[j].getPrice() * Prs[i].getPositions().get(y).getQuantity());
 						}
 					}

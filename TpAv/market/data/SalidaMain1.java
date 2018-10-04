@@ -4,12 +4,12 @@ public class SalidaMain1 {
 
 	private String ticker;
 	private double price;
-	private String ISIN;
-	public SalidaMain1(String ticker, double price, String iSIN) {
+	private String isin;
+	public SalidaMain1(String ticker, double price, String isin) {
 		super();
 		this.ticker = ticker;
 		this.price = price;
-		ISIN = iSIN;
+		this.isin = isin;
 	}
 	public String getTicker() {
 		return ticker;
@@ -24,10 +24,10 @@ public class SalidaMain1 {
 		this.price = price;
 	}
 	public String getISIN() {
-		return ISIN;
+		return isin;
 	}
 	public void setISIN(String iSIN) {
-		ISIN = iSIN;
+		isin = iSIN;
 	}
 	@Override
 	public String toString() {
