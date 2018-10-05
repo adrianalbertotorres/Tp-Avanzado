@@ -25,8 +25,7 @@ public class Main {
 		}else {
 		
 		//"https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json"
-		//Salida1.json Mercado.json
-		
+		//	Salida1.json prestamos.json
 		Object[] options = { "OK" };
 		JOptionPane.showOptionDialog(null, "Necesita tener 1 o 2 parametros de entrada", "archivo TP ",
 		JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,

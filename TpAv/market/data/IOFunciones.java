@@ -22,11 +22,11 @@ public class IOFunciones {
 
 		try {
 			URL url = new URL(dir);
-			Mercado[] accionistas = mapper.readValue(url, Mercado[].class);
+			Mercado[] mercado = mapper.readValue(url, Mercado[].class);
 
-			for (int i = 0; i < accionistas.length; i++) {
-				lista.add(new ListaSalidaDAO(accionistas[i].getTicker(), accionistas[i].getPrice(),
-						accionistas[i].getId()));
+			for (int i = 0; i < mercado.length; i++) {
+				lista.add(new ListaSalidaDAO(mercado[i].getTicker(), mercado[i].getPrice(),
+						mercado[i].getId()));
 
 			}
 

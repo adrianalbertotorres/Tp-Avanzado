@@ -25,7 +25,7 @@ public class Parte2 {
 				String referencia;
 					
 			File file2 = new File(dir1);
-			Entrada1[] Mer=mapper.readValue(file2, Entrada1[].class);
+			ListaSalidaDAO[] Mer=mapper.readValue(file2, ListaSalidaDAO[].class);
 			
 			File file3 = new File(dir2);
 			Prestamos[] Prs = mapper.readValue(file3, Prestamos[].class);
@@ -36,7 +36,7 @@ public class Parte2 {
 				for (int y = 0; y < Prs[i].getPositions().size(); y++) {
 					referencia = Prs[i].getPositions().get(y).getId();
 					for (int j = 0; j < Mer.length; j++) {
-						if (referencia.compareTo(Mer[j].getIsin()) == 0) {
+						if (referencia.compareTo(Mer[j].getISIN()) == 0) {
 							cartera = cartera + (Mer[j].getPrice() * Prs[i].getPositions().get(y).getQuantity());
 						}
 					}
