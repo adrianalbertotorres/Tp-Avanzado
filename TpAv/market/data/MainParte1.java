@@ -2,17 +2,16 @@ package market.data;
 
 public class MainParte1 {
 
-	public static void main(String[] direccion) {
+	public static void main(String[] dir) {
 
-		
-		String dir = "";					//Toma paramertro direccion y lo convierte en String
-		for (int i = 0; i < direccion.length; i++) {
-			dir = dir + direccion[i];
-		}
-
-		IOArchico.Lee(dir);
-		IOArchico.Escribe();
-		
 			
+		if (dir.length==1) {
+		IOArchico.Lee(dir[0]);
+		IOArchico.Escribe();
+		Parte2.Proceso();
+		}
+		if(dir.length==2) {}
+		
+		
 	}
 }

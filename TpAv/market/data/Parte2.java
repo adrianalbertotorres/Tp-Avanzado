@@ -11,18 +11,20 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public class MainParte2 {
+public class Parte2 {
 
-	public static void main(String[] args) {
 
-		List<SalidaIO2> lista2 = new ArrayList();
-		ObjectMapper mapper = new ObjectMapper();
-		String referencia;
-
-		double cartera = 0;
+	public static void	 Proceso(){
 		
 
 		try {
+			
+			    double cartera = 0;
+				List<SalidaIO2> lista2 = new ArrayList();
+				ObjectMapper mapper = new ObjectMapper();
+				String referencia;
+			
+			
 			URL url = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/prestamos.json");
 		
 			File file2 = new File("C:\\TPAvanzado\\Salida.json");
@@ -58,17 +60,17 @@ public class MainParte2 {
 			}
 			
 
-		} catch (JsonParseException e) {
+		} catch (JsonParseException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
+			e1.printStackTrace();
+		} catch (JsonMappingException e2) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+			e2.printStackTrace();
+		} catch (IOException e3) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e3.printStackTrace();
 
-		}
+		}finally {}
 	}
-
 }
+
