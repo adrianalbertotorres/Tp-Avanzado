@@ -14,23 +14,23 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 public class Parte2 {
 
 
-	public static void	 Proceso(){
+	public static void	 Proceso(String dir1,String dir2){
 		
 
 		try {
 			
 			    double cartera = 0;
-				List<SalidaIO2> lista2 = new ArrayList();
+				List<DetalleDeCuentasDAO> lista2 = new ArrayList();
 				ObjectMapper mapper = new ObjectMapper();
 				String referencia;
-			
-			
-			URL url = new URL("https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/prestamos.json");
-		
-			File file2 = new File("C:\\TPAvanzado\\Salida.json");
-			Prestamos[] Prs = mapper.readValue(url, Prestamos[].class);
-		
+					
+			File file2 = new File(dir1);
 			Entrada1[] Mer=mapper.readValue(file2, Entrada1[].class);
+			
+			File file3 = new File(dir2);
+			Prestamos[] Prs = mapper.readValue(file3, Prestamos[].class);
+		
+			
 
 			for (int i = 0; i < Prs.length; i++) {
 				for (int y = 0; y < Prs[i].getPositions().size(); y++) {
@@ -44,7 +44,7 @@ public class Parte2 {
 
 				if (Prs[i].getAmount() > cartera) {
 					lista2.add(
-							new SalidaIO2(Prs[i].getId(), Prs[i].getCreditpolicy(), Prs[i].getAmount(), (int) cartera));
+							new DetalleDeCuentasDAO(Prs[i].getId(), Prs[i].getCreditpolicy(), Prs[i].getAmount(), (int) cartera));
 				}
 
 				cartera = 0;

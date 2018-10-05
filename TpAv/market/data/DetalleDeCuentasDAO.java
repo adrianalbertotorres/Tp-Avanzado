@@ -1,13 +1,13 @@
 package market.data;
 
-public class SalidaIO2 {
+public class DetalleDeCuentasDAO {
  
  private String id;
  private String creditpolicy;
  private int quantity;
   private int elegible_collateral;
 
-  public SalidaIO2(String id2, String creditpolicy2, int amount, int cartera) {
+  public DetalleDeCuentasDAO(String id2, String creditpolicy2, int amount, int cartera) {
 	this.id=id2;
 	this.creditpolicy=creditpolicy2;
 	this.quantity=amount;

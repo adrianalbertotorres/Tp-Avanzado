@@ -13,10 +13,10 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public class IOArchico {
-	static List<SalidaMain1> lista = new ArrayList();
+public class IOFunciones {
+	static List<ListaSalidaDAO> lista = new ArrayList();
 
-	public static void Lee(String dir) {
+	public static void LeeMercado(String dir) {
 
 		ObjectMapper mapper = new ObjectMapper();
 
@@ -25,28 +25,29 @@ public class IOArchico {
 			Mercado[] accionistas = mapper.readValue(url, Mercado[].class);
 
 			for (int i = 0; i < accionistas.length; i++) {
-				lista.add(new SalidaMain1(accionistas[i].getTicker(), accionistas[i].getPrice(),
+				lista.add(new ListaSalidaDAO(accionistas[i].getTicker(), accionistas[i].getPrice(),
 						accionistas[i].getId()));
 
 			}
 
 		} catch (Exception e) {
-			System.out.println("archivo");
+			System.out.println(" Problema con el archivo de entrada ");
+			System.exit(0);
 		} finally {
-
+			
 		}
 	}
 
-	public static void Escribe() {
+	public static void EscribeListaSalida() {
 
 		File fileOut = new File("C:\\TPAvanzado\\Salida1.json");
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			mapper.enable(SerializationFeature.INDENT_OUTPUT);
 			mapper.writeValue(fileOut, lista);
-			System.out.println("Archivo \"Salida.Json\" generado");
+			
 			Object[] options = { "OK" };
-			JOptionPane.showOptionDialog(null, "En direcion C:\\TPAvanzado", "Se genero archivo Salida1.Json",
+			JOptionPane.showOptionDialog(null, "En direcion (Raiz):\\TPAvanzado, colocar archivo Mercado para la proxima ejecucion", "Se genero archivo Salida1.Json ",
 			JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
 			null, options, options[0]);
 			
