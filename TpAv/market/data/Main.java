@@ -7,6 +7,15 @@ import javax.swing.JOptionPane;
 import IO.IOFunciones;
 import IO.Parte2;
 
+/* Datos Utiles
+ * 
+Parametro  Pate 1 :"https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json"
+Parametros Parte 2:		Salida1.json 	prestamos.json		
+
+
+"https://github.com/adrianalbertotorres/Tp-Avanzado.git"
+ */
+
 public class Main {
 
 	public static void main(String[] dir) {
@@ -27,8 +36,8 @@ public class Main {
 		Parte2.Proceso(dir1,dir2);
 		}else {
 		
-		//"https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json"
-		//	Salida1.json prestamos.json
+		
+			
 		Object[] options = { "OK" };
 		JOptionPane.showOptionDialog(null, "Necesita tener 1 o 2 parametros de entrada", "archivo TP ",
 		JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
