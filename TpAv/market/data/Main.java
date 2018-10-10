@@ -10,7 +10,7 @@ import IO.Parte2;
 /* Datos Utiles
  * 
 Parametro  Pate 1 :"https://raw.githubusercontent.com/mlennard-utn/tp_avanzado/master/mercado.json"
-Parametros Parte 2:		Salida1.json 	prestamos.json		
+Parametros Parte 2:	Salida1.json prestamos.json
 
 
 "https://github.com/adrianalbertotorres/Tp-Avanzado.git"

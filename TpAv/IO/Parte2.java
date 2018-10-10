@@ -6,6 +6,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -58,6 +60,13 @@ public class Parte2 {
 			mapper.enable(SerializationFeature.INDENT_OUTPUT);
 			mapper.writeValue(fileOut2, lista2);
 			System.out.println("Archivo \"Salida2.Json\" generado en direccion: "+"C:\\TPAvanzado\\Salida2.json");
+			
+			
+			Object[] options = { "OK" };
+			JOptionPane.showOptionDialog(null, "En direcion (Raiz):\\TPAvanzado", "Se genero archivo Salida2.Json ",
+			JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,
+			null, options, options[0]);
+			
 			
 			for (int i = 0; i < lista2.size(); i++) {
 				System.out.println(lista2.get(i).toString());
