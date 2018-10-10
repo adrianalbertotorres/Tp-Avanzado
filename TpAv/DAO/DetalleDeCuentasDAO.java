@@ -1,4 +1,4 @@
-package market.data;
+package DAO;
 
 public class DetalleDeCuentasDAO {
  

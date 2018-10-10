@@ -4,6 +4,9 @@ import java.io.File;
 
 import javax.swing.JOptionPane;
 
+import IO.IOFunciones;
+import IO.Parte2;
+
 public class Main {
 
 	public static void main(String[] dir) {

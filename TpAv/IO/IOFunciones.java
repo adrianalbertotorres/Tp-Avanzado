@@ -1,4 +1,4 @@
-package market.data;
+package IO;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,6 +12,9 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+
+import DAO.ListaSalidaDAO;
+import clases.Mercado;
 
 public class IOFunciones {
 	static List<ListaSalidaDAO> lista = new ArrayList();

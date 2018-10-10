@@ -1,4 +1,4 @@
-package market.data;
+package clases;
 
 public class Mercado {
 

@@ -1,4 +1,4 @@
-package market.data;
+package clases;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
